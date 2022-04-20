@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Raid Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./styles/style.css">
+
+</head>
+
+<!--Navbar Code-->
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+     <div class="container-fluid">
+       <a class="navbar-brand" href="#">FFXIV Raid Static Registration</a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="collapsibleNavbar">
+         <ul class="navbar-nav">
+           <li class="nav-item">
+             <a class="nav-link" href="https://github.com/Akennemer/Hotelraid">REPO Link</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fakennemer.github.io%2FHotelraid%2F">NUChecker</a>
+           </li>
+         </ul>
+       </div>
+     </div></nav></div>
+
+
+<!--Registration Code-->
+<form class="needs-validation" novalidate>
+  <div class="mb-3">
+    <h1>So you're interested in raiding with the big boys?</h1>
+    <p>Go ahead and fill this out for us, please!</p>
+    <hr>
+    <label for="email" class="form-label"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email (For Communication!)" name="email" id="email" class="form-style" required>
+    
+    <label for="name" class="form-label"><b>Name</b></label>
+    <input type="text" placeholder="Enter your name!" name="name" id="name" required>
+
+    <label for="Charname" class="form-label"><b>Character Name</b></label>
+    <input type="text" placeholder="Character Name Here" name="Charname" id="Charname" required>
+    <hr></div></form>
+
+  <!--Which world, checkbox code-->
+
+    <fieldset>
+      <div>
+              <div><p>What roles can you play? (Click all that apply.)</p>
+              <input type="checkbox" id="Healer" name="source" value="Healer">
+                <label for="Healer">Healer</label></div>
+              <div>
+                <input type="checkbox" id="Tank" name="source" value="Tank">
+                <label for="Tank">Tank</label>
+              </div>
+              <div>
+               <input type="checkbox" id="MeleeDPS" name="source" value="MeleeDPS">
+                <label for="MeleeDPS">Melee DPS</label>
+              </div>
+              <div>
+                <input type="checkbox" id="PhysicalRanged" name="source" value="PhysicalRanged">
+                <label for="PhysicalRanged">Physical Ranged DPS</label>
+              </div>
+              <div>
+                <input type="checkbox" id="MagicRanged" name="source" value="MagicRanged">
+                <label for="MagicRanged">Magic Ranged DPS</label>
+              </div>
+      </div></fieldset>
+            <hr>
+
+
+ <!--User Chooses which world their raiding character is on-->
+ <label for="world">Choose Aether World</label>
+ <select name="world" id="world">
+ <option value="Adamantoise">Adamantoise</option>
+ <option value="Cactuar">Cactuar</option>
+ <option value="Faerie">Faerie</option>
+ <option value="Gilgamesh">Gilgamesh</option>
+ <option value="Jenova">Jenova</option>
+ <option value="Midgardsormr">Midgardsormr</option>
+ <option value="Sargantas">Sargantas</option>
+ <option value="Siren">Siren</option>
+ </select>
+ <hr>
+
+  <!--Day available-->
+<div>
+<p>What days are you available to raid?</p>
+  <input type="checkbox" id="Monday" name="source" value="Monday">
+  <label for="Monday">Monday</label></div>
+  <div><input type="checkbox" id="Tuesday" name="source" value="Tuesday">
+    <label for="Tuesday">Tuesday</label></div>
+    <div><input type="checkbox" id="Wednesday" name="source" value="Wednesday">
+      <label for="Wednesday">Wednesday</label>
+    </div>
+    <div><input type="checkbox" id="Thursday" name="source" value="Thursday">
+      <label for="Thursday">Thursday</label>
+    </div>
+    <div><input type="checkbox" id="Friday" name="source" value="Friday">
+      <label for="Friday">Friday</label>
+    </div>
+    <div><input type="checkbox" id="Saturday" name="source" value="Saturday">
+      <label for="Saturday">Saturday</label>
+    </div>
+    <div><input type="checkbox" id="Sunday" name="source" value="Sunday">
+      <label for="Sunday">Sunday</label>
+    </div>
+
+<hr>
+<div><p>Do you need callouts?</p>
+  <input type="radio" id="Calloutyes" name="Callout" value="Yes">
+<label for="Yes">Yes, please!</label><br>
+<input type="radio" id="Calloutno" name="Callout" value="No">
+<label for="No">No thank you, I'm good!</label><br>
+<div id="divExplain" style="display: none">
+  <label for="giveCallout">Are there any mechanics you can give callouts for?</label>
+  <input type="text" id="giveCallout" />
+</div>
+<hr>
+<label for="birthday">Birthday (This is for funsies!):</label>
+<input type="date" id="birthday" name="birthday">
+<hr>
+
+<div class="mb-3">
+  <code id="submitted_data"></code>
+</div>
+
+<div class="mb-3" style="text-align: center; margin-top: 0.5rem">
+  <button id="load-json" type="button" class="btn btn-info">
+    Load JSON
+  </button>
+  <button id="clear" type="button" class="btn btn-secondary">
+    Clear
+  </button>
+  <button type="submitButton" class="btn btn-primary">Submit</button>
+</div>
+</form>
+</div>
+</div>
+
+
+
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script><script  src="./scripts/script.js"></script>
+<script src="./scripts/loadJson.js"></script>
+
+</body>
+</html>
