@@ -1,4 +1,4 @@
-// $(function() {
+/ $(function() {
 
 
   $('#load-json').click(function() {
